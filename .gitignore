@@ -2,8 +2,8 @@
 *
 
 !.gitignore
-!www/img/*
-!www/css/*
-!www/js/*
-!www/*
-!www/
+!docs/img/*
+!docs/css/*
+!docs/js/*
+!docs/*
+!docs/
