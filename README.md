@@ -1,2 +1,2 @@
 # vertette.github.io
-A bkig,
+A blog.
