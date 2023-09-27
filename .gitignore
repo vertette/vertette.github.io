@@ -2,6 +2,9 @@
 *
 
 !.gitignore
+!docs/post/*
+!docs/auth/*
+!docs/cat/*
 !docs/img/*
 !docs/css/*
 !docs/js/*
