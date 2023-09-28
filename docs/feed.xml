@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Vertette's Blog</title>
         <link>https://vertette.github.io/</link>
@@ -15,6 +15,7 @@
             <guid>https://vertette.github.io/designpaperball</guid>
             <pubDate>Sun, 24 Sep 2023 12:30:00 GMT</pubDate>
             <description><![CDATA[Were Paperball's character designs a success? It's a hard question to answer for me.  I remember waking up early one morning and finding a message on my phone....]]></description>
+            <content:encoded><![CDATA[Were Paperball's character designs a success? It's a hard question to answer for me.  I remember waking up early one morning and finding a message on my phone....]]></content:encoded>
             <author>vertettegd@gmail.com (Vertette)</author>
         </item>
         <item>
@@ -23,6 +24,7 @@
             <guid>https://vertette.github.io/helloworld</guid>
             <pubDate>Sun, 24 Sep 2023 12:00:00 GMT</pubDate>
             <description><![CDATA[Welcome to my blog, my name is Christopher Stephens. By day I do boring IT work, by night I work on games. I've worked on games like Paperball, Salaryman Shi an...]]></description>
+            <content:encoded><![CDATA[Welcome to my blog, my name is Christopher Stephens. By day I do boring IT work, by night I work on games. I've worked on games like Paperball, Salaryman Shi an...]]></content:encoded>
             <author>vertettegd@gmail.com (Vertette)</author>
         </item>
     </channel>
