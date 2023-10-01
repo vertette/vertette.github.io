@@ -4,11 +4,21 @@
         <title>Vertette's Blog</title>
         <link>https://vertette.github.io/</link>
         <description>A blog about game design and development.</description>
-        <lastBuildDate>Sun, 24 Sep 2023 12:30:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 01 Oct 2023 12:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>All material (c) Christopher Stephens 2023 unless stated otherwise</copyright>
+        <item>
+            <title><![CDATA[The Pixel Art of Salaryman Shi]]></title>
+            <link>https://vertette.github.io/post/pixelartsalarymanshi</link>
+            <guid>https://vertette.github.io/post/pixelartsalarymanshi</guid>
+            <pubDate>Sun, 01 Oct 2023 12:00:00 GMT</pubDate>
+            <description><![CDATA[It was late 2019. I was bored out of my skull, waiting for DJ Coco to fix up a build for Paperball so I could get back on testing, but I didn't feel like workin...]]></description>
+            <content:encoded><![CDATA[It was late 2019. I was bored out of my skull, waiting for DJ Coco to fix up a build for Paperball so I could get back on testing, but I didn't feel like workin...]]></content:encoded>
+            <author>vertettegd@gmail.com (Vertette)</author>
+            <category>Pixel art</category>
+        </item>
         <item>
             <title><![CDATA[The Character Design of Paperball]]></title>
             <link>https://vertette.github.io/post/designpaperball</link>
@@ -17,6 +27,7 @@
             <description><![CDATA[Were Paperball's character designs a success? It's a hard question to answer for me.  I remember waking up early one morning and finding a message on my phone....]]></description>
             <content:encoded><![CDATA[Were Paperball's character designs a success? It's a hard question to answer for me.  I remember waking up early one morning and finding a message on my phone....]]></content:encoded>
             <author>vertettegd@gmail.com (Vertette)</author>
+            <category>Character design</category>
         </item>
         <item>
             <title><![CDATA[Hello World]]></title>
@@ -26,6 +37,7 @@
             <description><![CDATA[Welcome to my blog, my name is Christopher Stephens. By day I do boring IT work, by night I work on games. I've worked on games like Paperball, Salaryman Shi an...]]></description>
             <content:encoded><![CDATA[Welcome to my blog, my name is Christopher Stephens. By day I do boring IT work, by night I work on games. I've worked on games like Paperball, Salaryman Shi an...]]></content:encoded>
             <author>vertettegd@gmail.com (Vertette)</author>
+            <category>Other</category>
         </item>
     </channel>
 </rss>
