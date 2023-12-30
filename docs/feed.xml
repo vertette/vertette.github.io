@@ -4,11 +4,24 @@
         <title>Vertette's Blog</title>
         <link>https://vertette.github.io/</link>
         <description>A blog about game design and development.</description>
-        <lastBuildDate>Thu, 09 Nov 2023 19:30:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 30 Dec 2023 11:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>All material (c) Christopher Stephens 2023 unless stated otherwise</copyright>
+        <item>
+            <title><![CDATA[The Passing of Time]]></title>
+            <link>https://vertette.github.io/post/passingtime</link>
+            <guid>https://vertette.github.io/post/passingtime</guid>
+            <pubDate>Sat, 30 Dec 2023 11:00:00 GMT</pubDate>
+            <description><![CDATA["I'll try to write something every two weeks at the very least"... Right, when was the last- ah snozzberries. My hope to write more in 2023 was both a success and a failure. A success because I kept it going for longer than I imagined, a failure because I didn't keep it going for as long as I wanted to...]]></description>
+            <content:encoded><![CDATA[<p>&quot;I'll try to write something every two weeks at the very least&quot;... Right, when was the last- ah snozzberries.</p>
+<p>My hope to write more in 2023 was both a success and a failure. A success because I kept it going for longer than I imagined, a failure because I didn't keep it going for as long as I wanted to. I could throw out a dozen excuses, but during the hecticness of the past few months I simply forgot to write more. It's the good kind of hectic, thankfully. I'm not going into detail because <a href="https://www.youtube.com/watch?v=LCXbYChuVrA">this isn't that kind of blog</a>, but the past few years have been such a Loop-the-Loop that having life go the way I want it to for once has been a rather welcome change of pace. That has left me with less time and motivation to be creative, however.</p>
+<p>The problem with free time is that you have an abundance of it when you're young, but as the calendar pages turn you slowly lose most of the free time you have until there's not enough time or motivation to do much of anything. The day you get excited over having hours to waste is the same day the ritual is finally complete: the free time during which you did nothing that felt like such a torture as a child is now like a treasure, and when you realize this you have officially become an Old Person. Hindsight truly is the cruelest seductress.</p>
+<p>I still have plenty of exciting things lined up which I hope I'll get to show off in 2024, both related to games and writing. Sometimes both. I hope you get to see them, and I hope everyone's new year will be excellent.</p>]]></content:encoded>
+            <author>vertettegd@gmail.com (Vertette)</author>
+            <category>Other</category>
+        </item>
         <item>
             <title><![CDATA[The Story Integration of Deus Ex]]></title>
             <link>https://vertette.github.io/post/storytellingdeusex</link>
