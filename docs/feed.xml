@@ -4,7 +4,7 @@
         <title>Vertette's Blog</title>
         <link>https://vertette.github.io/</link>
         <description>A blog about game design and development.</description>
-        <lastBuildDate>Tue, 06 Feb 2024 23:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 05 Feb 2024 23:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -13,7 +13,7 @@
             <title><![CDATA[The Sustainability of AAA Games]]></title>
             <link>https://vertette.github.io/post/sustainabilityaaagames</link>
             <guid>https://vertette.github.io/post/sustainabilityaaagames</guid>
-            <pubDate>Tue, 06 Feb 2024 23:00:00 GMT</pubDate>
+            <pubDate>Mon, 05 Feb 2024 23:00:00 GMT</pubDate>
             <description><![CDATA[It's only been one month into the new year, and already things are looking dour for the video game industry. Last year we witnessed [million dollar games flopping](https://www.dualshockers.com/forspoken-studio-shut-down/) and [investors pulling out of sizable deals](https://www.ign.com/articles/embracer-group-is-starting-to-close-studios-campfire-cabal/), and now there's a swarm of [layoffs](https://www.theverge.com/2024/1/25/24049050/microsoft-activision-blizzard-layoffs) and [cancellations](https://www.bloomberg.com/news/articles/2024-01-29/embracer-group-cancels-deus-ex-video-game) to add on top as well. I've actually been meaning to write about this topic for...]]></description>
             <content:encoded><![CDATA[<p>It's only been one month into the new year, and already things are looking dour for the video game industry. Last year we witnessed <a href="https://www.dualshockers.com/forspoken-studio-shut-down/">million dollar games flopping</a> and <a href="https://www.ign.com/articles/embracer-group-is-starting-to-close-studios-campfire-cabal/">investors pulling out of sizable deals</a>, and now there's a swarm of <a href="https://www.theverge.com/2024/1/25/24049050/microsoft-activision-blizzard-layoffs">layoffs</a> and <a href="https://www.bloomberg.com/news/articles/2024-01-29/embracer-group-cancels-deus-ex-video-game">cancellations</a> to add on top as well. I've actually been meaning to write about this topic for months, but recent events have gotten so extreme I moved this article forward in the queue.</p>
 <p>It's safe to say that AAA games have been in a downward spiral for a while now. When exactly this change began is up for debate, but it's not an uncommon complaint that games have gotten <a href="https://www.gameinformer.com/2023/11/29/the-big-list-of-upcoming-video-game-remakes">less creative</a>, <a href="https://www.youtube.com/watch?v=RwD2492K9pc">less performant</a> and <a href="https://i.kym-cdn.com/entries/icons/original/000/045/169/cover6.jpg">less finished at launch</a> for at least some years. Sure, AAA games have also gotten a lot prettier, but to get there they've also gotten nakedly obvious about how little they think of the average consumer's intelligence between seventy dollar price tags, deluxe editions, pre-order goodies, season passes, microtransactions and more. All of this, according to the big publishers, is necessary because of the enormous risks involved with developing an AAA game. The consumer demands high budget photorealistic games, so by and large that's what publishers will make. It's necessary to ship out unfinished games and sell them piece by piece because otherwise, they'll never make a profit.</p>
