@@ -1,17 +1,9 @@
-# Ignore everything
-*
-!.gitignore
-!docs/auth/page
-!docs/cat/page
-!docs/page/*
-!docs/post/*
-!docs/auth/*
-!docs/cat/*
-!docs/img/*
-!docs/css/*
-!docs/js/*
-!docs/*
-!docs/
+*.js
+*.json
+/public
+/tests
+/tests-examples
+
 /node_modules/
 /test-results/
 /playwright-report/
