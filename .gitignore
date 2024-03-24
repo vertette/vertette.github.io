@@ -1,7 +1,9 @@
 # Ignore everything
 *
-
 !.gitignore
+!docs/auth/page
+!docs/cat/page
+!docs/page/*
 !docs/post/*
 !docs/auth/*
 !docs/cat/*
@@ -10,3 +12,8 @@
 !docs/js/*
 !docs/*
 !docs/
+/node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
