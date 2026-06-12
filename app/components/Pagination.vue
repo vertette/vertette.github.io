@@ -69,7 +69,6 @@
 
 	pageNoIs(props.currentPage)
 </script>
-
 <template>
 	<ul
 		class="bg-secondary border-primary shadow-(--card-shadow) *:border-primary max-w-min mx-auto align-stretch flex h-10 justify-center border rounded-xl">
