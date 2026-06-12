@@ -65,10 +65,6 @@
 		@apply text-[.85em];
 	}
 
-	#post {
-		@apply text-justify;
-	}
-
 	#post img {
 		@apply block mx-auto my-2;
 	}

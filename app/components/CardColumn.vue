@@ -9,6 +9,12 @@
 	const emitAuth = (auth) => emit("emit-author", auth)
 	const emitCat = (cat) => emit("emit-category", cat)
 
+	const router = useRouter()
+	const goBack = () => {
+		if (router.options.history.state.back) router.go(-1)
+		else router.push("/")
+	}
+
 	const extractText = (node) => {
 		if (Array.isArray(node)) return node.slice(2).map(extractText).join("")
 		if (typeof node === "string") return node
@@ -28,7 +34,7 @@
 			<h2>
 				<NuxtLink :href="post.path">{{ post.title }}</NuxtLink>
 			</h2>
-			<div class="flex flex-row justify-between items-baseline">
+			<div class="flex flex-col lg:flex-row justify-between items-baseline">
 				<span
 					><i class="fa-solid fa-user mr-1" /> By <a @click="emitAuth(post.author)">{{ post.author }}</a></span
 				>
@@ -39,8 +45,8 @@
 			</div>
 		</template>
 		<template v-slot:default v-if="postArray.length === 1">
-			<ContentRenderer class="text-pretty flex flex-col gap-4" :value="post" />
 			<NuxtLink class="btn" @click="$router.go(-1)">Back</NuxtLink>
+			<ContentRenderer class="flex flex-col gap-4" :value="post" />
 		</template>
 		<template v-slot:default v-else>
 			{{ generateExcerpt(post.body.value) }}
