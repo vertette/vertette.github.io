@@ -1,11 +1,20 @@
-*.js
-*.json
-/public
-/tests
-/tests-examples
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
 
-/node_modules/
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
+# Node dependencies
+node_modules
+
+# Logs
+logs
+*.log
+
+# Misc
+public/drafts
+.DS_Store
+.fleet
+.idea

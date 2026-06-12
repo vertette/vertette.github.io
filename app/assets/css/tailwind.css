@@ -1,0 +1,79 @@
+@import url(https://fonts.bunny.net/css?family=open-sans:400,700);
+@import "tailwindcss";
+
+@theme static {
+	--site-width: 999px;
+	--header-width: 1299px;
+	--color-cta: #ffffff;
+	--color-primary: #7d1932;
+	--color-background: #280005;
+	--font-open: "Open Sans", sans-serif;
+	--card-shadow: 3px 3px 0 0 var(--color-primary);
+}
+
+@utility interpolate-keywords {
+	interpolate-size: allow-keywords;
+}
+
+@layer base {
+	html {
+		@apply bg-cta dark:bg-background interpolate-keywords font-open;
+	}
+
+	body {
+		@apply text-background dark:text-cta text-[17px] bg-size-[48px_48px] bg-fixed xl:bg-(image:--grid) tracking-tighter;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-bold leading-[1.2];
+	}
+
+	h1 {
+		@apply text-[2.5rem];
+	}
+
+	h1 a {
+		@apply no-underline! decoration-0!;
+	}
+
+	h2 {
+		@apply text-[2rem];
+	}
+
+	h6 {
+		@apply text-xl;
+	}
+
+	a {
+		@apply cursor-pointer underline transition-opacity underline-offset-1 decoration-[.05em] hover:opacity-60;
+	}
+
+	a.btn {
+		@apply bg-primary inline-block ml-auto px-4 py-2 rounded-lg no-underline! font-bold;
+	}
+
+	button {
+		@apply cursor-pointer hover:*:opacity-60 font-bold *:transition-opacity disabled:cursor-[initial] flex items-center justify-center;
+	}
+
+	button i {
+		@apply text-[.85em];
+	}
+
+	#post {
+		@apply text-justify;
+	}
+
+	#post img {
+		@apply block mx-auto my-2;
+	}
+
+	#post img + em {
+		@apply text-[.85em] mt-2 text-center block w-11/12 mx-auto;
+	}
+}
