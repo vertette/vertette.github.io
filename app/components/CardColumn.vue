@@ -45,8 +45,8 @@
 			</div>
 		</template>
 		<template v-slot:default v-if="postArray.length === 1">
-			<NuxtLink class="btn" @click="$router.go(-1)">Back</NuxtLink>
 			<ContentRenderer class="flex flex-col gap-4" :value="post" />
+			<NuxtLink class="btn" @click="goBack">Back</NuxtLink>
 		</template>
 		<template v-slot:default v-else>
 			{{ generateExcerpt(post.body.value) }}
