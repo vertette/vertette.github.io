@@ -5,7 +5,6 @@
 		{ url: "https://cliax-games.com/", icon: "fa-solid fa-globe" },
 	]
 </script>
-
 <template>
 	<header class="bg-primary text-cta! w-full">
 		<Row class="h-full max-w-(--header-width)!">
@@ -15,7 +14,7 @@
 				</div>
 				<div class="flex gap-2">
 					<h6>Stalk me:</h6>
-					<a v-for="link in linkArray" :href="link.url"><i :class="link.icon" /></a>
+					<a v-for="link in linkArray" :href="link.url" target="_blank"><i :class="link.icon" /></a>
 				</div>
 			</div>
 		</Row>
