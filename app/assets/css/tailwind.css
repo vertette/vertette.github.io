@@ -54,15 +54,23 @@
 	}
 
 	a.btn {
-		@apply bg-primary inline-block ml-auto px-4 py-2 rounded-lg no-underline! font-bold;
+		@apply bg-primary inline-block ml-auto px-4 py-2 rounded-lg no-underline! font-bold text-cta!;
+	}
+
+	blockquote {
+		@apply border-l border-primary/80 px-4 py-3 flex flex-col gap-y-4;
+	}
+
+	blockquote p {
+		@apply text-background/80 dark:text-cta/80;
 	}
 
 	button {
-		@apply cursor-pointer hover:*:opacity-60 font-bold *:transition-opacity disabled:cursor-[initial] flex items-center justify-center;
+		@apply cursor-pointer hover:*:opacity-60 font-bold *:transition-opacity disabled:cursor-[initial] flex items-center justify-center text-cta!;
 	}
 
 	button i {
-		@apply text-[.85em];
+		@apply text-[.65em];
 	}
 
 	#post img {
