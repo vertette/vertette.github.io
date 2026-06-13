@@ -1,4 +1,7 @@
 <script setup>
+	const props = defineProps(["currentMode"])
+	const emit = defineEmits(["change-mode"])
+
 	const linkArray = [
 		{ url: "https://twitter.com/Vertette", icon: "fa-brands fa-x-twitter" },
 		{ url: "vertettegd@gmail.com", icon: "fa-solid fa-envelope" },
@@ -12,7 +15,15 @@
 				<div class="h-full">
 					<h1><NuxtLink href="/">Vertette's Blog</NuxtLink></h1>
 				</div>
-				<div class="flex gap-2">
+				<div class="flex items-center gap-2">
+					<i class="fa-solid fa-sun" />
+					<Checkbox
+						@click="emit('change-mode', currentMode !== 'dark' ? 'dark' : '')"
+						:class="{ active: currentMode === 'dark' }"
+						tabindex="0" />
+					<i class="fa-solid fa-moon" />
+				</div>
+				<div class="flex items-baseline gap-2">
 					<h6>Stalk me:</h6>
 					<a v-for="link in linkArray" :href="link.url" target="_blank"><i :class="link.icon" /></a>
 				</div>

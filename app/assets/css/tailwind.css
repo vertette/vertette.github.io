@@ -1,5 +1,6 @@
 @import url(https://fonts.bunny.net/css?family=open-sans:400,700);
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme static {
 	--site-width: 999px;
@@ -71,6 +72,18 @@
 
 	button i {
 		@apply text-[.65em];
+	}
+
+	checkbox {
+		@apply relative h-6 w-12 border border-primary bg-cta rounded-full;
+	}
+
+	checkbox::after {
+		@apply content-[""] size-5.5 absolute rounded-full border-cta border bg-primary top-0 left-0 transition-all;
+	}
+
+	checkbox.active::after {
+		@apply left-[calc(100%-22px)];
 	}
 
 	#post img {
