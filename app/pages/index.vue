@@ -42,7 +42,7 @@
 	}
 </script>
 <template>
-	<Row class="py-6">
+	<Row>
 		<CardColumn :postArray="filteredPosts" @emit-author="filterByAuthor" @emit-category="filterByCat" />
 		<Pagination
 			v-if="filteredPosts.length && filteredPostsLength > postsPerPage"

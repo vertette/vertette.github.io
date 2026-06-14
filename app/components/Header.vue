@@ -11,7 +11,7 @@
 <template>
 	<header class="bg-primary text-cta! w-full">
 		<Row class="h-full max-w-(--header-width)!">
-			<div class="flex h-full w-full flex-col lg:flex-row items-center justify-between py-4">
+			<div class="flex flex-wrap h-full w-full gap-y-2 flex-row items-center justify-between py-4">
 				<div class="h-full">
 					<h1><NuxtLink href="/">Vertette's Blog</NuxtLink></h1>
 				</div>

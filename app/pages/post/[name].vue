@@ -24,7 +24,7 @@
 </script>
 
 <template>
-	<Row class="my-6">
+	<Row>
 		<CardColumn :postArray="[post]" @emit-author="filterByAuthor" @emit-category="filterByCat" />
 	</Row>
 </template>
