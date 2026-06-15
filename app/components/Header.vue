@@ -6,7 +6,7 @@ const linkArray = [
   { url: 'https://twitter.com/Vertette', icon: 'fa-brands fa-x-twitter' },
   { url: 'vertettegd@gmail.com', icon: 'fa-solid fa-envelope' },
   { url: 'https://cliax-games.com/', icon: 'fa-solid fa-globe' },
-  { url: './feed', icon: 'fa-solid fa-rss' },
+  { url: './feed.xml', icon: 'fa-solid fa-rss' },
 ]
 </script>
 <template>
