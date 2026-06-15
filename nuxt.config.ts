@@ -24,7 +24,10 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'en',
       },
-      link: [{ rel: 'icon', type: 'image/png', href: '/img/favicon.png' }],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+      ],
       script: [{ src: 'https://kit.fontawesome.com/f626f8f6d9.js', defer: 'true' }],
       title: "Vertette's Blog",
       meta: [
@@ -39,7 +42,7 @@ export default defineNuxtConfig({
   },
   nitro: {
     prerender: {
-      routes: ['/', 'feed.xml', ...postRoutes],
+      routes: ['/', '/feed', ...postRoutes],
       crawlLinks: true,
     },
   },
