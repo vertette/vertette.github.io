@@ -74,6 +74,10 @@
     @apply text-[.65em];
   }
 
+  hr {
+    @apply -my-6
+  }
+
   checkbox {
     @apply border-primary bg-cta relative h-6 w-12 rounded-full border;
   }
