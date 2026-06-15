@@ -1,11 +1,12 @@
 import { Feed } from 'feed'
+const baseUrl = 'https://vertette.github.io'
 
 export default defineEventHandler(async (event) => {
   const feed = new Feed({
     title: "Vertette's Blog",
     description: 'A blog where an obscure indie dev dumps his thoughts sometimes.',
-    id: 'https://vertette.github.io/',
-    link: 'https://vertette.github.io/',
+    id: baseUrl,
+    link: baseUrl,
     language: 'en',
     author: {
       name: 'Vertette',
@@ -18,10 +19,16 @@ export default defineEventHandler(async (event) => {
   for (const post of posts) {
     feed.addItem({
       title: post.title ?? 'Untitled',
-      id: `https://vertette.github.io/${post.path}`,
-      link: `https://vertette.github.io/${post.path}`,
+      id: `${baseUrl}${post.path}`,
+      link: `${baseUrl}${post.path}`,
+      image: `${baseUrl}${post.thumbnail}`,
       description: post.description ?? '',
       date: new Date(post.date),
+      author: [
+        {
+          name: post.author,
+        },
+      ],
     })
   }
 
