@@ -1,12 +1,19 @@
 import tailwindcss from '@tailwindcss/vite'
+import { fileURLToPath } from 'url'
 import { readdirSync } from 'fs'
 import path from 'path'
-const __dirname = path.resolve()
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 function getContentRoutes(dir: string, base: string) {
-  return readdirSync(__dirname + dir)
-    .filter((file) => !file.startsWith('.'))
-    .map((file) => `/${base}/${file.replace(/(?:[0-9]{2,3}\.)?(.*)\.[a-z]{2,4}/, '$1')}`)
+  try {
+    return readdirSync(path.join(__dirname, dir))
+      .filter((file) => !file.startsWith('.'))
+      .map((file) => `/${base}/${file.replace(/(?:[0-9]{2,3}\.)?(.*)\.[a-z]{2,4}/, '$1')}`)
+  } catch (e) {
+    console.warn(`Could not read content from ${dir}:`, e.message)
+    return []
+  }
 }
 
 const postRoutes = getContentRoutes('/content/post', 'post')
@@ -17,11 +24,9 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'en',
       },
-      link: [
-        { rel: 'icon', type: 'image/png', href: '/img/favicon.png' },
-      ],
+      link: [{ rel: 'icon', type: 'image/png', href: '/img/favicon.png' }],
       script: [{ src: 'https://kit.fontawesome.com/f626f8f6d9.js', defer: 'true' }],
-      title: 'Vertette\'s Blog',
+      title: "Vertette's Blog",
       viewport: 'width=device-width, initial-scale=1',
       charset: 'utf-8',
     },
