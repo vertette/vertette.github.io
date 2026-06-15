@@ -3,6 +3,7 @@ const router = useRouter()
 const route = useRoute()
 
 const post = await queryCollection('posts').path(route.path).first()
+const postTitle = (post ? post.title : "Not Found") + " - Vertette's Blog" 
 
 const filterByAuthor = (author) => router.push({ path: '/', query: { author } })
 const filterByCat = (category) => router.push({ path: '/', query: { category } })
@@ -19,12 +20,13 @@ onMounted(() => {
 })
 
 useSeoMeta({
-  title: post.title + " - Vertette's Blog",
+  title: postTitle,
 })
 </script>
 
 <template>
   <Row>
-    <CardColumn :postArray="[post]" @emit-author="filterByAuthor" @emit-category="filterByCat" />
+    <CardColumn v-if="post" :postArray="[post]" @emit-author="filterByAuthor" @emit-category="filterByCat" />
+    <NotFound v-else />
   </Row>
 </template>

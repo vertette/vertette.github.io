@@ -37,7 +37,8 @@ const updatePosts = (pageNo) => {
 </script>
 <template>
   <Row>
-    <CardColumn :postArray="filteredPosts" @emit-author="filterByAuthor" @emit-category="filterByCat" />
+    <CardColumn v-if="filteredPosts.length" :postArray="filteredPosts" @emit-author="filterByAuthor" @emit-category="filterByCat" />
+    <NotFound v-else />
     <Pagination v-if="filteredPosts.length && filteredPostsLength > postsPerPage" :currentPage="currentPage" :pageLength="pageLength" @emit-number="updatePosts" />
   </Row>
 </template>
