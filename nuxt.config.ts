@@ -27,13 +27,19 @@ export default defineNuxtConfig({
       link: [{ rel: 'icon', type: 'image/png', href: '/img/favicon.png' }],
       script: [{ src: 'https://kit.fontawesome.com/f626f8f6d9.js', defer: 'true' }],
       title: "Vertette's Blog",
+      meta: [
+        {
+          name: 'description',
+          content: 'A blog where an obscure indie dev dumps his thoughts sometimes.',
+        },
+      ],
       viewport: 'width=device-width, initial-scale=1',
       charset: 'utf-8',
     },
   },
   nitro: {
     prerender: {
-      routes: ['/', ...postRoutes],
+      routes: ['/', 'feed.xml', ...postRoutes],
       crawlLinks: true,
     },
   },
