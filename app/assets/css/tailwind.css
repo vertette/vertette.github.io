@@ -1,96 +1,96 @@
 @import url(https://fonts.bunny.net/css?family=open-sans:400,700);
-@import "tailwindcss";
+@import 'tailwindcss';
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme static {
-	--site-width: 999px;
-	--header-width: 1299px;
-	--color-cta: #ffffff;
-	--color-primary: #7a1122;
-	--color-background: #280008;
-	--font-open: "Open Sans", sans-serif;
-	--card-shadow: 3px 3px 0 0 var(--color-primary);
+  --site-width: 999px;
+  --header-width: 1299px;
+  --color-cta: #ffffff;
+  --color-primary: #7a1122;
+  --color-background: #280008;
+  --font-open: 'Open Sans', sans-serif;
+  --card-shadow: 3px 3px 0 0 var(--color-primary);
 }
 
 @utility interpolate-keywords {
-	interpolate-size: allow-keywords;
+  interpolate-size: allow-keywords;
 }
 
 @layer base {
-	html {
-		@apply bg-cta dark:bg-background interpolate-keywords font-open;
-	}
+  html {
+    @apply bg-cta dark:bg-background interpolate-keywords font-open transition-colors;
+  }
 
-	body {
-		@apply text-background dark:text-cta text-[17px] bg-size-[48px_48px] bg-fixed xl:bg-(image:--grid) tracking-tighter;
-	}
+  body {
+    @apply text-background dark:text-cta bg-size-[48px_48px] bg-fixed text-[17px] tracking-tighter transition-colors xl:bg-(image:--grid);
+  }
 
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		@apply font-bold leading-[1.2];
-	}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply leading-[1.2] font-bold;
+  }
 
-	h1 {
-		@apply text-[2.5rem];
-	}
+  h1 {
+    @apply text-[2.5rem];
+  }
 
-	h1 a {
-		@apply no-underline! decoration-0!;
-	}
+  h1 a {
+    @apply no-underline! decoration-0!;
+  }
 
-	h2 {
-		@apply text-[2rem];
-	}
+  h2 {
+    @apply text-[2rem];
+  }
 
-	h6 {
-		@apply text-xl;
-	}
+  h6 {
+    @apply text-xl;
+  }
 
-	a {
-		@apply cursor-pointer underline transition-opacity underline-offset-1 decoration-[.05em] hover:opacity-60;
-	}
+  a {
+    @apply cursor-pointer underline decoration-[.05em] underline-offset-1 transition-opacity hover:opacity-60;
+  }
 
-	a.btn {
-		@apply bg-primary inline-block ml-auto px-4 py-2 rounded-lg no-underline! font-bold text-cta!;
-	}
+  a.btn {
+    @apply bg-primary text-cta! ml-auto inline-block rounded-lg px-4 py-2 font-bold no-underline!;
+  }
 
-	blockquote {
-		@apply border-l border-primary/80 px-4 py-3 flex flex-col gap-y-4;
-	}
+  blockquote {
+    @apply border-primary/80 flex flex-col gap-y-4 border-l px-4 py-3;
+  }
 
-	blockquote p {
-		@apply text-background/80 dark:text-cta/80;
-	}
+  blockquote p {
+    @apply text-background/80 dark:text-cta/80;
+  }
 
-	button {
-		@apply cursor-pointer hover:*:opacity-60 font-bold *:transition-opacity disabled:cursor-[initial] flex items-center justify-center text-cta!;
-	}
+  button {
+    @apply text-cta! flex cursor-pointer items-center justify-center font-bold *:transition-opacity hover:*:opacity-60 disabled:cursor-[initial];
+  }
 
-	button i {
-		@apply text-[.65em];
-	}
+  button i {
+    @apply text-[.65em];
+  }
 
-	checkbox {
-		@apply relative h-6 w-12 border border-primary bg-cta rounded-full;
-	}
+  checkbox {
+    @apply border-primary bg-cta relative h-6 w-12 rounded-full border;
+  }
 
-	checkbox::after {
-		@apply content-[""] size-5.5 absolute rounded-full border-cta border bg-primary top-0 left-0 transition-all;
-	}
+  checkbox::after {
+    @apply border-cta bg-primary absolute top-0 left-0 size-5.5 rounded-full border transition-all content-[""];
+  }
 
-	checkbox.active::after {
-		@apply left-[calc(100%-22px)];
-	}
+  checkbox.active::after {
+    @apply left-[calc(100%-22px)];
+  }
 
-	#post img {
-		@apply block mx-auto my-2;
-	}
+  #post img {
+    @apply mx-auto my-2 block;
+  }
 
-	#post img + em {
-		@apply text-[.85em] mt-2 text-center block w-11/12 mx-auto;
-	}
+  #post img + em {
+    @apply mx-auto mt-2 block w-11/12 text-center text-[.85em];
+  }
 }

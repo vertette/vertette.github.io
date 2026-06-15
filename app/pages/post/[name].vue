@@ -1,30 +1,30 @@
 <script setup>
-	const router = useRouter()
-	const route = useRoute()
+const router = useRouter()
+const route = useRoute()
 
-	const post = await queryCollection("posts").path(route.path).first()
+const post = await queryCollection('posts').path(route.path).first()
 
-	const filterByAuthor = (author) => router.push({ path: '/', query: { author } })
-	const filterByCat = (category) => router.push({ path: '/', query: { category } })
+const filterByAuthor = (author) => router.push({ path: '/', query: { author } })
+const filterByCat = (category) => router.push({ path: '/', query: { category } })
 
-	onMounted(() => {
-		document.querySelectorAll("#post a").forEach((c) => {
-			if (c.getAttribute("href") && c.getAttribute("href").startsWith("/"))
-				c.addEventListener("click", (e) => {
-					e.preventDefault()
-					this.$router.push(c.getAttribute("href"))
-				})
-			else c.setAttribute("target", "_blank")
-		})
-	})
+onMounted(() => {
+  document.querySelectorAll('#post a').forEach((c) => {
+    if (c.getAttribute('href') && c.getAttribute('href').startsWith('/'))
+      c.addEventListener('click', (e) => {
+        e.preventDefault()
+        this.$router.push(c.getAttribute('href'))
+      })
+    else c.setAttribute('target', '_blank')
+  })
+})
 
-	useSeoMeta({
-		title: post.title + " - Vertette's Blog",
-	})
+useSeoMeta({
+  title: post.title + " - Vertette's Blog",
+})
 </script>
 
 <template>
-	<Row>
-		<CardColumn :postArray="[post]" @emit-author="filterByAuthor" @emit-category="filterByCat" />
-	</Row>
+  <Row>
+    <CardColumn :postArray="[post]" @emit-author="filterByAuthor" @emit-category="filterByCat" />
+  </Row>
 </template>
