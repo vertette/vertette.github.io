@@ -78,7 +78,7 @@ pageNoIs(props.currentPage)
       v-for="(n, index) in pageArray"
       :key="index"
       :class="n === pageNo ? 'bg-primary text-cta pointer-events-none -my-0.5' : 'border-r'"
-      class="group rounded-none px-3 sm:px-4"
+      class="group rounded-none px-3 sm:px-4 select-none"
       :disabled="n === '...'"
       @click="pageNoIs(n)"
     >
