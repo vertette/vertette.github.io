@@ -1,20 +1,36 @@
 <script setup>
 const router = useRouter()
 const route = useRoute()
+const postsPerPage = 8
 
-const posts = await queryCollection('posts').order('date', 'DESC').all()
 const currentPage = computed(() => Number(route.query.page) || 1)
 const filterCategory = computed(() => route.query.category || '')
 const filterAuthor = computed(() => route.query.author || '')
-const postsPerPage = 8
 
-const allFilteredPosts = computed(() =>
-  [...new Set(posts)].filter((p) => (!filterCategory.value || p.category.includes(filterCategory.value)) && (!filterAuthor.value || p.author === filterAuthor.value)),
+function buildBaseQuery() {
+  let query = queryCollection('posts').order('date', 'DESC')
+  if (filterCategory.value) query = query.where('category', 'LIKE', `%${filterCategory.value}%`)
+  if (filterAuthor.value) query = query.where('author', '=', filterAuthor.value)
+  return query
+}
+
+const { data } = await useAsyncData(
+  () => `${currentPage.value}-${filterCategory.value}-${filterAuthor.value}`,
+  async () => {
+    const total = await buildBaseQuery().count()
+    const posts = await buildBaseQuery()
+      .skip((currentPage.value - 1) * postsPerPage)
+      .limit(postsPerPage)
+      .all()
+    return { posts, total }
+  },
+  { watch: [currentPage, filterCategory, filterAuthor] },
 )
-const filteredPosts = computed(() => allFilteredPosts.value.slice((currentPage.value - 1) * postsPerPage, currentPage.value * postsPerPage))
 
-const pageLength = computed(() => Math.ceil(allFilteredPosts.value.length / postsPerPage))
-const filteredPostsLength = computed(() => allFilteredPosts.value.length)
+const filteredPosts = computed(() => data.value?.posts ?? [])
+const filteredPostsLength = computed(() => data.value?.total ?? 0)
+const pageLength = computed(() => Math.ceil(filteredPostsLength.value / postsPerPage))
+
 const buildQuery = (overrides, page = 1) => {
   const base = {
     ...(filterCategory.value && { category: filterCategory.value }),
