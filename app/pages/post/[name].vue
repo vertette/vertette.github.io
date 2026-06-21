@@ -26,7 +26,7 @@ useSeoMeta({
 
 <template>
   <Row>
-    <CardColumn v-if="post" :postArray="[post]" @emit-author="filterByAuthor" @emit-category="filterByCat" />
+    <CardColumn v-if="post" :postArray="[post]" :fullPost="true" @emit-author="filterByAuthor" @emit-category="filterByCat" />
     <NotFound v-else />
   </Row>
 </template>

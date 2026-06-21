@@ -4,6 +4,10 @@ const props = defineProps({
     type: Array,
     required: true,
   },
+  fullPost: {
+    type: Boolean,
+    required: true,
+  }
 })
 const emit = defineEmits(['emit-author', 'emit-category'])
 const emitAuth = (auth) => emit('emit-author', auth)
@@ -44,7 +48,7 @@ const generateExcerpt = (bodyValue, wordLimit = 60) => {
         >
       </div>
     </template>
-    <template v-slot:default v-if="postArray.length === 1">
+    <template v-slot:default v-if="fullPost">
       <ContentRenderer class="flex flex-col gap-4" :value="post" />
       <NuxtLink class="btn" @click="goBack">Back</NuxtLink>
     </template>
