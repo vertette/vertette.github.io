@@ -50,6 +50,14 @@
     @apply text-xl;
   }
 
+  ul {
+    @apply list-[square] ml-5
+  }
+
+  ul li {
+    @apply leading-relaxed
+  }
+
   a {
     @apply cursor-pointer underline decoration-[.05em] underline-offset-1 transition-opacity hover:opacity-60;
   }
